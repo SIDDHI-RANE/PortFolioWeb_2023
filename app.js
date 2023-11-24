@@ -12,6 +12,18 @@ $(document).ready(function () {
     });
 });
 
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark');
+    body.classList.toggle('light');
+    // Change the button text based on the current theme
+    if (body.classList.contains('dark')) {
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    } else {
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+});
 
 $(document).ready(function () {
     // Add smooth scrolling to all links
